@@ -11,7 +11,7 @@ contract VisitorIntegrationExample {
         collection = _collection;
     }
 
-    function _btcPrice() private view returns (uint256) {
+    function _btcUsdPrice() private view returns (uint256) {
         (bytes memory _origami, uint256 _timestamp) = IVisitor(collection).visit();
 
         /// @dev Example of decoding uint256
@@ -22,7 +22,7 @@ contract VisitorIntegrationExample {
     }
 
     function swap() external {
-        uint256 _btcPrice = _btcPrice();
+        uint256 _btcUsdPrice = _btcUsdPrice();
         /// @dev Do something with the price
     }
 }
